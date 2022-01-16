@@ -1,6 +1,6 @@
 {
   "name": "pvvd",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Password manager, that don't keep your passwords",
   "source": "src/index.html",
   "scripts": {
