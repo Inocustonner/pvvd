@@ -1,0 +1,23 @@
+{
+  "name": "pvvd",
+  "version": "0.0.1",
+  "description": "Password manager, that don't keep your passwords",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "cross-env NODE_ENV=production parcel build --public-url ./ && copyfiles -u 1 dist/* extension/public"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "parcel": "^2.2.0"
+  },
+  "dependencies": {
+    "base-x": "^3.0.9",
+    "copy-to-clipboard": "^3.3.1",
+    "cross-env": "^7.0.3",
+    "crypto-js": "^4.1.1",
+    "secure-random": "^1.1.2"
+  }
+}

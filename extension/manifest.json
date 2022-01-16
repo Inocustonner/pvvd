@@ -1,0 +1,20 @@
+{
+  "name": "pvvd",
+  "version": "0.0.1",
+  "description": "",
+  "manifest_version": 2,
+
+  "permissions": [
+    "storage"
+  ],
+
+  "icons": {
+    "16": "icon128.png",
+    "48": "icon128.png",
+    "128": "icon128.png"
+  },
+
+  "browser_action": {
+    "default_popup": "/public/index.html"
+  }
+}
