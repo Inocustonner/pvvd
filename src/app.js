@@ -34,8 +34,8 @@ const hash = (msg, cut) => {
 }
 
 const SECRET_INP_EL = document.getElementById("secret")
-
-document.getElementById("salt").addEventListener("input", e => {
+const SALT_INP_EL = document.getElementById("salt")
+SALT_INP_EL.addEventListener("input", e => {
     const salt = e.target.value
     if (salt !== "")
         copy(hash(salt, 14))
@@ -52,3 +52,4 @@ document.getElementById("generate_secret").addEventListener("click", e => {
     SECRET_INP_EL.value = SECRET
 })
 SECRET_INP_EL.value = SECRET
+SALT_INP_EL.focus()

@@ -2,6 +2,8 @@ body {
   background-color: #444;
 }
 
+input:focus {outline:none!important;}
+
 .hidden-text {
   color: #777;
 }
@@ -13,4 +15,14 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.round-corners {
+  border-radius: 0px;
+  padding: 5px;
+}
+
+.stylish-border {
+  border: none;
+  border-width: 0;
 }
