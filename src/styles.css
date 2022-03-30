@@ -8,6 +8,12 @@ input:focus {outline:none!important;}
   color: #777;
 }
 
+.purpose-text {
+  color: #BBB;
+  font-size: 1.2em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .image-container {
   display: flex;
   justify-content: center;
@@ -25,4 +31,59 @@ input:focus {outline:none!important;}
 .stylish-border {
   border: none;
   border-width: 0;
+}
+
+/* REMOVE NUMBER INPUT ARROWS */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.noselect {
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.purpose_cont {
+  margin-top: 5px;
+}
+
+#generate_secret {
+  margin-top: 5px;
+}
+
+.generate-cont {
+  margin-top: 1em;
+}
+
+input.secret-font {
+  font-size: max(0.7em, 10px);
+}
+
+details.hide-arrow > summary {
+  list-style: none;
+}
+details.hide-arrow > summary::-webkit-details-marker {
+  display: none;
+}
+
+.point-cursor {
+  cursor: pointer;
+}
+
+radio {
+  /* display: none; */
 }

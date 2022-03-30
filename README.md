@@ -1,0 +1,1 @@
+To open secret `double click` on corresponding radio button
