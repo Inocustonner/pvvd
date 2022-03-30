@@ -29,6 +29,11 @@ const remove_secret_el = (purpose) => {
     remove_secret(purpose)
 }
 
+const check_purpose = (purpose_div) => {
+    purpose_div.querySelector("[name='secret_radio']").checked=true
+    purpose_div.querySelector("[name='secret_radio']").dispatchEvent(new Event("change"))
+}
+
 var LAST_CHECKED = null
 const add_secret_el = (purpose, secret) => {
     const node_template = document.createElement("template")
@@ -67,10 +72,14 @@ const add_secret_el = (purpose, secret) => {
     // }
 }
 
-document.getElementById("generate_secret").addEventListener("click", _ => {
-    let purpose = PURPOSE_GEN_NAME.value
-    PURPOSE_GEN_NAME.value = ""
-    add_secret_el(purpose, create_secret(purpose))
+document.getElementById("purpose_gen_name").addEventListener("keyup", e => {
+    if (e.key == "Enter") {
+        let purpose = PURPOSE_GEN_NAME.value
+        PURPOSE_GEN_NAME.value = ""
+        add_secret_el(purpose, create_secret(purpose))
+        document.getElementById("gen_details").open = false
+        check_purpose(OPTIONS_CONT.lastElementChild)
+    }
 })
 
 SALT_INP_EL.addEventListener("input", e => {
@@ -90,7 +99,6 @@ if (OPTIONS_CONT.childElementCount === 1 || last_checked === null) {
 } else {
     to_check = OPTIONS_CONT.children[parseInt(last_checked)]
 }
-to_check.querySelector("[name='secret_radio']").checked=true
-to_check.querySelector("[name='secret_radio']").dispatchEvent(new Event("change"))
+check_purpose(to_check)
 
 SALT_INP_EL.focus()
